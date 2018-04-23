@@ -1,0 +1,84 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/tomatoContainer"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.example.time.TomatoFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+    <LinearLayout
+        android:id="@+id/tomato_titleBar"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="#f1f1f1">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="2"
+            android:gravity="center"
+            android:text="番茄"
+            android:textSize="25dp"
+            android:textColor="#000000"
+            />
+    </LinearLayout>
+    <View
+        android:id="@+id/today_downline"
+        android:layout_width="match_parent"
+        android:layout_height="0.1dp"
+        android:layout_below="@id/today_titlebar"
+        android:background="#000000"></View>
+
+    <ImageView
+        android:id="@+id/tomatoSetting"
+        android:layout_width="31dp"
+        android:layout_height="35dp"
+        android:layout_gravity="right"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="20dp"
+        android:src="@drawable/ic_setting_2_black" />
+
+    <com.github.pavlospt.CircleView
+        android:id="@+id/investCircle"
+        android:layout_width="160dp"
+        android:layout_height="160dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="100dp"
+        app:cv_backgroundColorValue="#ffffff"
+        app:cv_fillColor="#5CACEE"
+        app:cv_fillRadius="0.9"
+        app:cv_strokeColorValue="#5CACEE"
+        app:cv_strokeWidthSize="5"
+        app:cv_subtitleColor="#ffffff"
+        app:cv_subtitleSize="20dp"
+        app:cv_subtitleText="25:00"
+        app:cv_titleColor="#ffffff"
+        app:cv_titleSize="30dp"
+        app:cv_titleSubtitleSpace="50"
+        app:cv_titleText="投入">
+
+    </com.github.pavlospt.CircleView>
+
+    <com.github.pavlospt.CircleView
+        android:id="@+id/restCircle"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_gravity="right"
+        android:layout_marginRight="40dp"
+        app:cv_backgroundColorValue="#ffffff"
+        app:cv_fillColor="#FFC125"
+        app:cv_fillRadius="0.9"
+        app:cv_strokeColorValue="#4eee94"
+        app:cv_strokeWidthSize="5"
+        app:cv_subtitleColor="#FFC125"
+        app:cv_subtitleText="5"
+        app:cv_titleColor="#ffffff"
+        app:cv_titleSize="15dp"
+        app:cv_titleText="休息">
+
+    </com.github.pavlospt.CircleView>
+
+</LinearLayout>

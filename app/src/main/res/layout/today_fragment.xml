@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:fab="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+   <LinearLayout
+       android:id="@+id/today_titlebar"
+       android:orientation="horizontal"
+       android:layout_width="match_parent"
+       android:layout_height="?attr/actionBarSize"
+       android:background="#f1f1f1">
+      <ImageView
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_gravity="center_vertical"
+          android:src="@drawable/clock"/>
+      <TextView
+          android:id="@+id/rest_time"
+          android:layout_width="0dp"
+          android:layout_height="wrap_content"
+          android:layout_weight="1"
+
+          />
+      <TextView
+          android:layout_width="0dp"
+          android:layout_height="match_parent"
+          android:layout_weight="2"
+          android:gravity="center"
+          android:text="今天"
+          android:textSize="25dp"
+          android:textColor="#000000"
+          />
+      <TextView
+          android:layout_width="0dp"
+          android:layout_height="wrap_content"
+          android:layout_weight="1"></TextView>
+      <ImageView
+          android:id="@+id/goal_info"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_gravity="center_vertical"
+          android:src="@drawable/right_menu"/>
+   </LinearLayout>
+
+   <View
+       android:id="@+id/today_downline"
+       android:layout_width="match_parent"
+       android:layout_height="0.1dp"
+       android:layout_below="@id/today_titlebar"
+       android:background="#000000"></View>
+
+   <TextView
+       android:id="@+id/todaytime_textview"
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:layout_below="@id/today_downline"
+       android:layout_marginLeft="10dp"
+       android:layout_marginRight="10dp"
+       android:text="今天时间"/>
+
+   <LinearLayout
+       android:id="@+id/invest_layout"
+       android:orientation="horizontal"
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:layout_below="@+id/todaytime_textview"
+       android:layout_marginLeft="10dp"
+       android:layout_marginRight="10dp"
+       android:layout_marginBottom="5dp">
+      <ProgressBar
+          android:id="@+id/invest_progressbar"
+
+          android:layout_width="0dp"
+          android:layout_height="wrap_content"
+          android:layout_weight="6.5"
+
+
+          style="?android:attr/progressBarStyleHorizontal"
+          android:progressDrawable="@drawable/invest_progressbar"
+          android:max="1000"/>
+
+      <TextView
+          android:id="@+id/invest_hint"
+          android:layout_width="0dp"
+          android:layout_height="wrap_content"
+          android:layout_weight="1.5"
+          android:gravity="right"/>
+   </LinearLayout>
+
+  <LinearLayout
+      android:id="@+id/waste_layout"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_marginLeft="10dp"
+      android:layout_marginRight="10dp"
+      android:layout_marginBottom="20dp"
+      android:layout_below="@id/invest_layout">
+     <ProgressBar
+         android:id="@+id/waste_progressbar"
+
+         android:layout_width="0dp"
+         android:layout_height="wrap_content"
+         android:layout_weight="6.5"
+
+         style="?android:attr/progressBarStyleHorizontal"
+         android:progressDrawable="@drawable/waste_progressbar"
+
+         android:max="1000">
+
+     </ProgressBar>
+
+      <TextView
+          android:id="@+id/waste_hint"
+          android:layout_width="0dp"
+          android:layout_height="wrap_content"
+          android:layout_weight="1.5"
+          android:gravity="right"/>
+  </LinearLayout>
+
+
+
+   <android.support.v7.widget.RecyclerView
+       android:id="@+id/recycle_view"
+       android:layout_marginLeft="10dp"
+       android:layout_marginRight="10dp"
+       android:layout_width="match_parent"
+       android:layout_height="match_parent"
+       android:layout_below="@+id/waste_layout"
+       />
+
+   <android.support.design.widget.FloatingActionButton
+       android:id="@+id/add_fab"
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:layout_alignParentBottom="true"
+       android:layout_alignParentRight="true"
+       android:layout_margin="12dp"
+       android:src="@drawable/blackadd"
+       app:backgroundTint="@android:color/white"
+       app:fabSize="mini" />
+
+   <android.support.design.widget.FloatingActionButton
+       android:id="@+id/invest_fab"
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:layout_alignParentBottom="true"
+       android:layout_toLeftOf="@+id/add_fab"
+       android:layout_margin="12dp"
+       android:src="@drawable/whiteadd"
+       app:backgroundTint="@android:color/holo_blue_dark"
+       app:fabSize="mini" />
+
+
+
+
+</RelativeLayout>
